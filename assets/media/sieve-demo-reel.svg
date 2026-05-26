@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Sieve public-safe demo reel storyboard</title>
+  <desc id="desc">A sanitized walkthrough storyboard showing Capture, Extract, Review, and Search steps for Sieve without private app footage.</desc>
+  <rect width="960" height="540" fill="#f6f8fb"/>
+  <rect x="36" y="34" width="888" height="472" rx="8" fill="#ffffff" stroke="#d9dee7"/>
+  <text x="72" y="86" fill="#166c5f" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="18" font-weight="800">PUBLIC-SAFE DEMO REEL</text>
+  <text x="72" y="126" fill="#1f2733" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="42" font-weight="800">Sieve sanitized walkthrough</text>
+  <text x="72" y="160" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="20">Capture to AI extraction to review packet to search/recall</text>
+
+  <g transform="translate(72 214)">
+    <rect width="174" height="178" rx="8" fill="#edf7f5" stroke="#b8d8d2"/>
+    <circle cx="34" cy="36" r="16" fill="#166c5f"/>
+    <text x="29" y="42" fill="#ffffff" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="18" font-weight="800">1</text>
+    <text x="24" y="84" fill="#1f2733" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="28" font-weight="800">Capture</text>
+    <text x="24" y="116" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">Rough notes, links,</text>
+    <text x="24" y="140" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">messages, and files</text>
+  </g>
+
+  <path d="M260 303h58" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round"/>
+  <path d="m309 292 15 11-15 11" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(338 214)">
+    <rect width="174" height="178" rx="8" fill="#f0f4ff" stroke="#c3cff2"/>
+    <circle cx="34" cy="36" r="16" fill="#355fc7"/>
+    <text x="29" y="42" fill="#ffffff" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="18" font-weight="800">2</text>
+    <text x="24" y="84" fill="#1f2733" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="28" font-weight="800">Extract</text>
+    <text x="24" y="116" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">AI proposes typed</text>
+    <text x="24" y="140" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">memory candidates</text>
+  </g>
+
+  <path d="M526 303h58" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round"/>
+  <path d="m575 292 15 11-15 11" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(604 214)">
+    <rect width="174" height="178" rx="8" fill="#fff7e8" stroke="#ead5ad"/>
+    <circle cx="34" cy="36" r="16" fill="#b7791f"/>
+    <text x="29" y="42" fill="#ffffff" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="18" font-weight="800">3</text>
+    <text x="24" y="84" fill="#1f2733" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="28" font-weight="800">Review</text>
+    <text x="24" y="116" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">Packet approval</text>
+    <text x="24" y="140" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="15">keeps memory trusted</text>
+  </g>
+
+  <path d="M452 410c44 44 172 44 216 0" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round"/>
+  <path d="m660 408 16-8-3 17" fill="none" stroke="#d9dee7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(338 408)">
+    <rect width="174" height="60" rx="8" fill="#f9fbfd" stroke="#d9dee7"/>
+    <text x="22" y="38" fill="#1f2733" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="24" font-weight="800">Search</text>
+  </g>
+  <text x="72" y="468" fill="#647184" font-family="IBM Plex Sans, Inter, Arial, sans-serif" font-size="17">Not private app footage. Public artifact uses synthetic content and high-level product states only.</text>
+</svg>

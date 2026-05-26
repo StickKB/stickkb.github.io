@@ -444,6 +444,35 @@ h3 {
   border-style: dashed;
 }
 
+.media-reel {
+  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1fr);
+  align-items: center;
+  background: #ffffff;
+  border-style: solid;
+}
+
+.media-reel-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #f6f8fb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.media-reel-content {
+  display: grid;
+  gap: 10px;
+}
+
+.media-reel-content p {
+  margin: 0;
+}
+
+.media-note {
+  font-size: 0.95rem;
+}
+
 .hero-diagram {
   width: 100%;
   background: #ffffff;
