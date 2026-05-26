@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sieve AI memory workflow</title>
+  <desc id="desc">Capture flows into extraction, review, memory, and search.</desc>
+  <rect width="760" height="420" fill="#f7faf9"/>
+  <rect x="42" y="44" width="676" height="332" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+  <text x="70" y="88" fill="#1f2733" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Sieve system path</text>
+  <text x="70" y="118" fill="#647184" font-family="Inter, Arial, sans-serif" font-size="16">Raw knowledge becomes reviewed, searchable memory.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">
+    <rect x="70" y="165" width="128" height="82" rx="8" fill="#e8f3f1" stroke="#166c5f" stroke-width="2"/>
+    <text x="100" y="199" fill="#0e4e45">Capture</text>
+    <text x="92" y="224" fill="#647184" font-size="13" font-weight="600">notes, docs, clips</text>
+
+    <rect x="236" y="165" width="128" height="82" rx="8" fill="#edf2ff" stroke="#355fc7" stroke-width="2"/>
+    <text x="263" y="199" fill="#274493">Extract</text>
+    <text x="259" y="224" fill="#647184" font-size="13" font-weight="600">entities, claims</text>
+
+    <rect x="402" y="165" width="128" height="82" rx="8" fill="#fff7e8" stroke="#b7791f" stroke-width="2"/>
+    <text x="430" y="199" fill="#865711">Review</text>
+    <text x="426" y="224" fill="#647184" font-size="13" font-weight="600">packet, approve</text>
+
+    <rect x="568" y="165" width="128" height="82" rx="8" fill="#f1f4f8" stroke="#647184" stroke-width="2"/>
+    <text x="598" y="199" fill="#1f2733">Search</text>
+    <text x="596" y="224" fill="#647184" font-size="13" font-weight="600">memory recall</text>
+  </g>
+
+  <g stroke="#647184" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M204 206h24"/>
+    <path d="M370 206h24"/>
+    <path d="M536 206h24"/>
+  </g>
+
+  <g fill="#647184">
+    <path d="M228 206l-9-6v12z"/>
+    <path d="M394 206l-9-6v12z"/>
+    <path d="M560 206l-9-6v12z"/>
+  </g>
+
+  <rect x="160" y="292" width="440" height="42" rx="8" fill="#1f2733"/>
+  <text x="204" y="319" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Verification checks guard memory quality before reuse</text>
+</svg>

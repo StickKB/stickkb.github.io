@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Convoy | Nick Ding</title>
+    <meta
+      name="description"
+      content="Convoy case study: a realtime iOS group navigation app by Nick Ding."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to Main Content</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Nick Ding home">
+        <span class="brand-mark">ND</span>
+        <span>Nick Ding</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="sieve.html">Sieve</a>
+        <a href="https://github.com/StickKB/convoy-readme">Case-study repo</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="project-hero">
+        <div>
+          <p class="eyebrow">Active product</p>
+          <h1>Convoy</h1>
+          <p class="positioning">realtime iOS group navigation app</p>
+          <p class="summary">
+            Convoy is a native iPhone MVP for small private groups that deliberately
+            start a drive together. The product line is "Stay close, even apart":
+            create a convoy, join by code, share map and destination context, use
+            active in-app Talk, and end the convoy so sharing stops.
+          </p>
+          <div class="intro-actions" aria-label="Convoy actions">
+            <a class="button primary" href="#technical-depth">Read Technical Depth</a>
+            <a class="button secondary" href="https://github.com/StickKB/convoy-readme">Open Case-study Repo</a>
+          </div>
+        </div>
+        <img class="hero-diagram" src="../assets/convoy-architecture.svg" width="920" height="560" fetchpriority="high" alt="Convoy architecture diagram showing iPhone client, session backend, realtime state, MapKit guidance, LiveKit Talk, and privacy guardrails.">
+      </section>
+
+      <section class="section detail-grid" aria-label="Convoy overview">
+        <article>
+          <h2>20-second summary</h2>
+          <p>
+            Convoy proves realtime mobile range: private group sessions, shared map
+            state, route and ETA context, and press-and-hold Talk for people driving
+            together without turning the app into public tracking.
+          </p>
+        </article>
+        <article>
+          <h2>2-minute technical depth</h2>
+          <p>
+            The system combines a SwiftUI iPhone app, MapKit/Core Location,
+            Supabase session and realtime boundaries, LiveKit voice rooms,
+            privacy-first permission timing, and explicit runtime validation gates.
+          </p>
+        </article>
+        <article>
+          <h2>Private-source note</h2>
+          <p>
+            Source private during active development; technical walkthrough available on request.
+          </p>
+        </article>
+      </section>
+
+      <section id="technical-depth" class="section case-study" aria-labelledby="depth-title">
+        <div class="section-heading">
+          <p class="eyebrow">Case Study</p>
+          <h2 id="depth-title">Realtime coordination without always-on tracking</h2>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Product problem</h3>
+            <p>
+              Friends driving separately often coordinate through scattered texts,
+              calls, screenshots, and navigation apps. Convoy narrows the problem:
+              a private group deliberately starts a session, shares only the state
+              needed for that drive, and has one obvious way to stop sharing.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Realtime/mobile workflow</h3>
+            <ol class="step-list">
+              <li><strong>Create:</strong> start a private convoy session from the app.</li>
+              <li><strong>Join:</strong> enter a short code or open a shareable deep link.</li>
+              <li><strong>Coordinate:</strong> show cars on a shared map with freshness and accuracy state.</li>
+              <li><strong>Navigate:</strong> set an optional destination with route, ETA, and next maneuver context.</li>
+              <li><strong>Talk and end:</strong> use active in-app press-and-hold Talk, then end the convoy to stop sharing.</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Architecture</h3>
+            <p>
+              Convoy is structured as a thin native iOS client over managed realtime
+              services. SwiftUI owns the app shell and convoy UI, MapKit/Core
+              Location owns map and location behavior, Supabase owns auth, session
+              state, RLS-protected membership, Edge Functions, Broadcast, and
+              Presence, and LiveKit owns active convoy voice rooms.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Tech stack</h3>
+            <ul class="compact-list">
+              <li>SwiftUI native iPhone app</li>
+              <li>MapKit route overlays, ETA, next maneuver text, and Apple Maps fallback</li>
+              <li>Core Location with convoy-context permission timing</li>
+              <li>Supabase Auth, Postgres, RLS, Edge Functions, Broadcast, and Presence</li>
+              <li>LiveKit active in-app press-and-hold Talk</li>
+              <li>APNs notification contract deferred until runtime hardening</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="case-panel wide-panel">
+          <h3>State/API overview</h3>
+          <p>
+            The public-safe model is category-level: convoy sessions, membership,
+            join codes, same-convoy access boundaries, latest member state, optional
+            shared destination, route/ETA context, realtime Broadcast and Presence,
+            user display names, nicknames, car colors, LiveKit room identity,
+            short-lived token issuance, and end-convoy stop-sharing behavior. Raw
+            endpoint specs, table definitions, policies, and source code stay private.
+          </p>
+        </article>
+
+        <div class="case-grid three-column">
+          <article class="case-panel">
+            <h3>What I built</h3>
+            <p>
+              I shaped the MVP around a deliberately started private convoy, built
+              the deterministic prototype loop, modeled create/join/session state,
+              mapped member identity to car markers, and kept privacy/app review
+              constraints visible while service-backed runtime paths were staged.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Verification</h3>
+            <p>
+              Verification includes prototype journey checks, static milestone
+              scripts, Swift/XCTest source coverage, RLS test outlines, copy and
+              privacy reviews, and explicit blockers for Mac/Xcode, Supabase, and
+              LiveKit runtime validation.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Evidence model</h3>
+            <p>
+              Public proof comes from architecture diagrams, state/API category
+              summaries, prototype walkthrough notes, verification summaries, and
+              interview walkthroughs rather than public source code.
+            </p>
+          </article>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Trade-offs</h3>
+            <ul class="compact-list">
+              <li>MapKit plus Apple Maps fallback keeps scope smaller than full embedded navigation.</li>
+              <li>Active in-app Talk is simpler and safer than background or lock-screen walkie-talkie behavior.</li>
+              <li>Supabase state and LiveKit voice split realtime coordination from audio transport.</li>
+              <li>No location history by default reduces privacy risk but limits playback/debugging.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <h3>Current rough edges</h3>
+            <ul class="compact-list">
+              <li>Runtime validation still needs Mac/Xcode, Supabase, LiveKit, and device or simulator access.</li>
+              <li>Supabase Broadcast/Presence, LiveKit audio, and Sign in with Apple need full integration testing.</li>
+              <li>Public demo media is pending because screenshots and walkthroughs must avoid sensitive location or identity data.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="case-panel wide-panel">
+          <h3>Roadmap</h3>
+          <ol class="roadmap-list">
+            <li>Wire Sign in with Apple into the beta auth flow.</li>
+            <li>Connect create/join state to Supabase realtime with same-convoy authorization.</li>
+            <li>Validate two-device map, destination, route, and end-convoy flows.</li>
+            <li>Validate LiveKit room join, press/release mute behavior, and convoy-end disconnect.</li>
+            <li>Finish hosted privacy/deletion URLs and private beta readiness checks.</li>
+          </ol>
+        </article>
+
+        <article class="media-placeholder" aria-labelledby="convoy-media-title">
+          <div>
+            <p class="eyebrow">Media</p>
+            <h3 id="convoy-media-title">Demo media pending</h3>
+          </div>
+          <p>
+            Planned demo: a simulator or device walkthrough showing create/join,
+            live map state, shared destination, route/ETA context, active Talk state,
+            and end-convoy cleanup. Until that recording is safe to publish, the
+            architecture diagram and walkthrough notes are the public evidence.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a class="text-link" href="../index.html">Back to Portfolio</a></p>
+      <p class="footer-meta">Built as a static GitHub Pages portfolio. <span data-year></span></p>
+    </footer>
+
+    <script src="../assets/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sieve | Nick Ding</title>
+    <meta
+      name="description"
+      content="Sieve case study: an AI knowledge and memory workspace by Nick Ding."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to Main Content</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Nick Ding home">
+        <span class="brand-mark">ND</span>
+        <span>Nick Ding</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="convoy.html">Convoy</a>
+        <a href="https://github.com/StickKB/sieve-readme">Case-study repo</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="project-hero">
+        <div>
+          <p class="eyebrow">Active product</p>
+          <h1>Sieve</h1>
+          <p class="positioning">AI knowledge and memory workspace</p>
+          <p class="summary">
+            Sieve turns messy personal input into reviewable, searchable memory.
+            The product centers on one loop: capture anything, ask Sieve what it
+            knows, and review every proposed change before it becomes durable knowledge.
+          </p>
+          <div class="intro-actions" aria-label="Sieve actions">
+            <a class="button primary" href="#technical-depth">Read Technical Depth</a>
+            <a class="button secondary" href="https://github.com/StickKB/sieve-readme">Open Case-study Repo</a>
+          </div>
+        </div>
+        <img class="hero-diagram" src="../assets/sieve-architecture.svg" width="920" height="560" fetchpriority="high" alt="Sieve architecture diagram showing capture, semantic units, review packets, approved knowledge graph, and Ask Sieve retrieval.">
+      </section>
+
+      <section class="section detail-grid" aria-label="Sieve overview">
+        <article>
+          <h2>20-second summary</h2>
+          <p>
+            Sieve is a private-source AI memory workspace that captures rough
+            thoughts, Discord messages, files, links, and conversations, then turns
+            them into reviewable memory records with source evidence intact.
+          </p>
+        </article>
+        <article>
+          <h2>2-minute technical depth</h2>
+          <p>
+            The system combines a review-gated AI extraction pipeline, typed
+            knowledge records, graph links, source provenance, generated API clients,
+            and retrieval feedback so memory stays useful instead of becoming a pile
+            of raw notes.
+          </p>
+        </article>
+        <article>
+          <h2>Private-source note</h2>
+          <p>
+            Source private during active development; technical walkthrough available on request.
+          </p>
+        </article>
+      </section>
+
+      <section id="technical-depth" class="section case-study" aria-labelledby="depth-title">
+        <div class="section-heading">
+          <p class="eyebrow">Case Study</p>
+          <h2 id="depth-title">AI memory with review-gated data quality</h2>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Product problem</h3>
+            <p>
+              Personal knowledge tools usually fail in one of two ways: they store
+              raw dumps that are hard to reuse, or they let AI rewrite memory too
+              aggressively. Sieve aims for the middle path: preserve the original
+              capture, propose useful memory changes, and make the user approve what
+              becomes durable.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>AI/data workflow</h3>
+            <ol class="step-list">
+              <li><strong>Capture:</strong> accept rough input from notes, messages, links, files, or Discord DMs.</li>
+              <li><strong>Interpret:</strong> split the capture into semantic units before creating candidates.</li>
+              <li><strong>Review:</strong> present notes, work items, resources, reminders, tags, and links as a packet.</li>
+              <li><strong>Retrieve:</strong> answer later questions from approved knowledge with citations and evidence.</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Architecture</h3>
+            <p>
+              Sieve uses a TypeScript web dashboard, a Node API service, an OpenAPI
+              contract with generated clients, and Supabase/Postgres as the durable
+              store. The AI layer enriches captures and retrieval, while the review
+              workflow is the default safety boundary for memory mutation.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Tech stack</h3>
+            <ul class="compact-list">
+              <li>React and Vite dashboard</li>
+              <li>TypeScript and Node API service</li>
+              <li>OpenAPI, Zod, and generated React client package</li>
+              <li>Supabase/Postgres, Drizzle, row-level ownership hardening, and pgvector retrieval</li>
+              <li>OpenAI-backed extraction and retrieval helpers</li>
+              <li>pnpm workspace with Vercel deployment conventions</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="case-panel wide-panel">
+          <h3>Data/API overview</h3>
+          <p>
+            The public-safe model is category-level: captures, review packets,
+            review candidates, approved knowledge nodes, work items, derived project
+            views, source documents, source evidence, graph links, retrieval events,
+            feedback, settings, export/delete controls, and Discord pairing. The
+            public case study intentionally avoids raw endpoint catalogs, table
+            definitions, and policy text.
+          </p>
+        </article>
+
+        <div class="case-grid three-column">
+          <article class="case-panel">
+            <h3>What I built</h3>
+            <p>
+              I shaped the product language and implementation around Capture,
+              Review Packet, Review Candidate, WorkItem, Knowledge Link, Source
+              Evidence, and Ask Sieve so the UI, API, and data model share the same
+              mental model.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Verification</h3>
+            <p>
+              Verification spans model tests for candidate policy, API and dashboard
+              tests for review behavior, generated contract checks, typechecking,
+              source-level route assertions, and browser QA where authentication
+              gates allow it.
+            </p>
+          </article>
+
+          <article class="case-panel">
+            <h3>Evidence model</h3>
+            <p>
+              Public proof comes from architecture diagrams, schema/API category
+              summaries, verification notes, safe screenshots or videos, and
+              interview walkthroughs rather than public source code.
+            </p>
+          </article>
+        </div>
+
+        <div class="case-grid two-column">
+          <article class="case-panel">
+            <h3>Trade-offs</h3>
+            <ul class="compact-list">
+              <li>Review-first memory is slower than silent auto-save, but it preserves trust.</li>
+              <li>Postgres plus graph-style records is simpler to operate than adding a separate graph database.</li>
+              <li>Collapsed source evidence keeps the main UI usable while preserving debuggability.</li>
+            </ul>
+          </article>
+
+          <article class="case-panel">
+            <h3>Current rough edges</h3>
+            <ul class="compact-list">
+              <li>Ask Sieve is still moving from retrieval inspection toward a more conversational answer surface.</li>
+              <li>Review needs more grouping so users see what will change before seeing classifier details.</li>
+              <li>Demo media is pending because the public showcase cannot expose private data or active source.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="case-panel wide-panel">
+          <h3>Roadmap</h3>
+          <ol class="roadmap-list">
+            <li>Unify capture for notes, files, source imports, and Discord DMs.</li>
+            <li>Turn retrieval into an Ask Sieve chatbot with citations and evidence controls.</li>
+            <li>Simplify review around what will change in memory.</li>
+            <li>Make knowledge detail, graph, and source evidence contextual rather than primary destinations.</li>
+            <li>Add evaluation coverage for capture quality, review usefulness, and grounded retrieval answers.</li>
+          </ol>
+        </article>
+
+        <article class="media-placeholder" aria-labelledby="sieve-media-title">
+          <div>
+            <p class="eyebrow">Media</p>
+            <h3 id="sieve-media-title">Demo media pending</h3>
+          </div>
+          <p>
+            Planned demo: a 60-90 second walkthrough showing capture, AI extraction,
+            review packet approval, Ask Sieve retrieval, and source evidence. Until
+            that recording is safe to publish, the architecture diagram and
+            walkthrough notes are the public evidence.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a class="text-link" href="../index.html">Back to Portfolio</a></p>
+      <p class="footer-meta">Built as a static GitHub Pages portfolio. <span data-year></span></p>
+    </footer>
+
+    <script src="../assets/site.js"></script>
+  </body>
+</html>

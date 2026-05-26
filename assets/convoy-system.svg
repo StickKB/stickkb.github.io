@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Convoy realtime navigation workflow</title>
+  <desc id="desc">A mobile group shares destination, map, and voice state.</desc>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <rect x="42" y="44" width="676" height="332" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+  <text x="70" y="88" fill="#1f2733" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Convoy realtime loop</text>
+  <text x="70" y="118" fill="#647184" font-family="Inter, Arial, sans-serif" font-size="16">Group navigation state stays synchronized across riders.</text>
+
+  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="#b7791f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="16 14" stroke-linecap="round"/>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">
+    <rect x="84" y="158" width="138" height="74" rx="8" fill="#e8f3f1" stroke="#166c5f" stroke-width="2"/>
+    <text x="116" y="188" fill="#0e4e45">Create</text>
+    <text x="108" y="211" fill="#647184" font-size="13" font-weight="600">group route</text>
+
+    <rect x="304" y="125" width="150" height="74" rx="8" fill="#edf2ff" stroke="#355fc7" stroke-width="2"/>
+    <text x="344" y="155" fill="#274493">Live map</text>
+    <text x="336" y="178" fill="#647184" font-size="13" font-weight="600">shared position</text>
+
+    <rect x="514" y="214" width="154" height="74" rx="8" fill="#fff7e8" stroke="#b7791f" stroke-width="2"/>
+    <text x="546" y="244" fill="#865711">Talk state</text>
+    <text x="540" y="267" fill="#647184" font-size="13" font-weight="600">press-to-talk</text>
+  </g>
+
+  <g fill="#1f2733">
+    <circle cx="150" cy="293" r="12"/>
+    <circle cx="380" cy="240" r="12"/>
+    <circle cx="620" cy="207" r="12"/>
+  </g>
+
+  <rect x="160" y="326" width="440" height="42" rx="8" fill="#1f2733"/>
+  <text x="213" y="353" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Destination, presence, and voice state move together</text>
+</svg>
