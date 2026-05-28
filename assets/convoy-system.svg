@@ -1,34 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
   <title id="title">Convoy realtime navigation workflow</title>
   <desc id="desc">A mobile group shares destination, map, and voice state.</desc>
-  <rect width="760" height="420" fill="#f8fafc"/>
-  <rect x="42" y="44" width="676" height="332" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
-  <text x="70" y="88" fill="#1f2733" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Convoy realtime loop</text>
-  <text x="70" y="118" fill="#647184" font-family="Inter, Arial, sans-serif" font-size="16">Group navigation state stays synchronized across riders.</text>
+  <rect width="760" height="420" fill="#0A0B0F"/>
+  <rect x="42" y="44" width="676" height="332" rx="12" fill="#12131A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="70" y="88" fill="#EDEDF0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Convoy realtime loop</text>
+  <text x="70" y="118" fill="#8B8D98" font-family="Inter, Arial, sans-serif" font-size="16">Group navigation state stays synchronized across riders.</text>
 
-  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="#b7791f" stroke-width="10" stroke-linecap="round"/>
-  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="16 14" stroke-linecap="round"/>
+  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="rgba(16,185,129,0.30)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M118 290c80-102 178-120 280-52s168 54 244-34" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="16 14" stroke-linecap="round"/>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">
-    <rect x="84" y="158" width="138" height="74" rx="8" fill="#e8f3f1" stroke="#166c5f" stroke-width="2"/>
-    <text x="116" y="188" fill="#0e4e45">Create</text>
-    <text x="108" y="211" fill="#647184" font-size="13" font-weight="600">group route</text>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="84" y="158" width="138" height="74" rx="10" fill="rgba(16,185,129,0.10)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="153" y="188" fill="#34D399" font-size="15" font-weight="700">Create</text>
+    <text x="153" y="211" fill="#8B8D98" font-size="13" font-weight="500">group route</text>
 
-    <rect x="304" y="125" width="150" height="74" rx="8" fill="#edf2ff" stroke="#355fc7" stroke-width="2"/>
-    <text x="344" y="155" fill="#274493">Live map</text>
-    <text x="336" y="178" fill="#647184" font-size="13" font-weight="600">shared position</text>
+    <rect x="304" y="125" width="150" height="74" rx="10" fill="rgba(59,130,246,0.10)" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="379" y="155" fill="#60A5FA" font-size="15" font-weight="700">Live map</text>
+    <text x="379" y="178" fill="#8B8D98" font-size="13" font-weight="500">shared position</text>
 
-    <rect x="514" y="214" width="154" height="74" rx="8" fill="#fff7e8" stroke="#b7791f" stroke-width="2"/>
-    <text x="546" y="244" fill="#865711">Talk state</text>
-    <text x="540" y="267" fill="#647184" font-size="13" font-weight="600">press-to-talk</text>
+    <rect x="514" y="214" width="154" height="74" rx="10" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="591" y="244" fill="#FBBF24" font-size="15" font-weight="700">Talk state</text>
+    <text x="591" y="267" fill="#8B8D98" font-size="13" font-weight="500">press-to-talk</text>
   </g>
 
-  <g fill="#1f2733">
-    <circle cx="150" cy="293" r="12"/>
-    <circle cx="380" cy="240" r="12"/>
-    <circle cx="620" cy="207" r="12"/>
+  <g fill="#EDEDF0">
+    <circle cx="150" cy="293" r="10"/>
+    <circle cx="380" cy="240" r="10"/>
+    <circle cx="620" cy="207" r="10"/>
   </g>
 
-  <rect x="160" y="326" width="440" height="42" rx="8" fill="#1f2733"/>
-  <text x="213" y="353" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Destination, presence, and voice state move together</text>
+  <rect x="158" y="326" width="444" height="48" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+  <g fill="#8B8D98" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="380" y="350">Destination, presence, and voice state</text>
+    <text x="380" y="369">move together</text>
+  </g>
 </svg>

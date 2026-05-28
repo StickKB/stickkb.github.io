@@ -1,41 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
   <title id="title">Sieve AI memory workflow</title>
   <desc id="desc">Capture flows into extraction, review, memory, and search.</desc>
-  <rect width="760" height="420" fill="#f7faf9"/>
-  <rect x="42" y="44" width="676" height="332" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
-  <text x="70" y="88" fill="#1f2733" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Sieve system path</text>
-  <text x="70" y="118" fill="#647184" font-family="Inter, Arial, sans-serif" font-size="16">Raw knowledge becomes reviewed, searchable memory.</text>
+  <rect width="760" height="420" fill="#0A0B0F"/>
+  <rect x="42" y="44" width="676" height="332" rx="12" fill="#12131A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="70" y="88" fill="#EDEDF0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Sieve system path</text>
+  <text x="70" y="118" fill="#8B8D98" font-family="Inter, Arial, sans-serif" font-size="16">Raw knowledge becomes reviewed, searchable memory.</text>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">
-    <rect x="70" y="165" width="128" height="82" rx="8" fill="#e8f3f1" stroke="#166c5f" stroke-width="2"/>
-    <text x="100" y="199" fill="#0e4e45">Capture</text>
-    <text x="92" y="224" fill="#647184" font-size="13" font-weight="600">notes, docs, clips</text>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="70" y="165" width="128" height="82" rx="10" fill="rgba(59,130,246,0.10)" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="134" y="199" fill="#3B82F6" font-size="17" font-weight="700">Capture</text>
+    <text x="134" y="224" fill="#8B8D98" font-size="13" font-weight="500">notes, docs, clips</text>
 
-    <rect x="236" y="165" width="128" height="82" rx="8" fill="#edf2ff" stroke="#355fc7" stroke-width="2"/>
-    <text x="263" y="199" fill="#274493">Extract</text>
-    <text x="259" y="224" fill="#647184" font-size="13" font-weight="600">entities, claims</text>
+    <rect x="236" y="165" width="128" height="82" rx="10" fill="rgba(124,92,252,0.10)" stroke="#7C5CFC" stroke-width="1.5"/>
+    <text x="300" y="199" fill="#9178FF" font-size="17" font-weight="700">Extract</text>
+    <text x="300" y="224" fill="#8B8D98" font-size="13" font-weight="500">entities, claims</text>
 
-    <rect x="402" y="165" width="128" height="82" rx="8" fill="#fff7e8" stroke="#b7791f" stroke-width="2"/>
-    <text x="430" y="199" fill="#865711">Review</text>
-    <text x="426" y="224" fill="#647184" font-size="13" font-weight="600">packet, approve</text>
+    <rect x="402" y="165" width="128" height="82" rx="10" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="466" y="199" fill="#FBBF24" font-size="17" font-weight="700">Review</text>
+    <text x="466" y="224" fill="#8B8D98" font-size="13" font-weight="500">packet, approve</text>
 
-    <rect x="568" y="165" width="128" height="82" rx="8" fill="#f1f4f8" stroke="#647184" stroke-width="2"/>
-    <text x="598" y="199" fill="#1f2733">Search</text>
-    <text x="596" y="224" fill="#647184" font-size="13" font-weight="600">memory recall</text>
+    <rect x="568" y="165" width="128" height="82" rx="10" fill="rgba(16,185,129,0.10)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="632" y="199" fill="#34D399" font-size="17" font-weight="700">Search</text>
+    <text x="632" y="224" fill="#8B8D98" font-size="13" font-weight="500">memory recall</text>
   </g>
 
-  <g stroke="#647184" stroke-width="3" fill="none" stroke-linecap="round">
+  <g stroke="#5C5E6A" stroke-width="2" fill="none" stroke-linecap="round">
     <path d="M204 206h24"/>
     <path d="M370 206h24"/>
     <path d="M536 206h24"/>
   </g>
 
-  <g fill="#647184">
+  <g fill="#5C5E6A">
     <path d="M228 206l-9-6v12z"/>
     <path d="M394 206l-9-6v12z"/>
     <path d="M560 206l-9-6v12z"/>
   </g>
 
-  <rect x="160" y="292" width="440" height="42" rx="8" fill="#1f2733"/>
-  <text x="204" y="319" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Verification checks guard memory quality before reuse</text>
+  <rect x="154" y="292" width="452" height="48" rx="10" fill="rgba(124,92,252,0.08)" stroke="rgba(124,92,252,0.25)" stroke-width="1"/>
+  <g fill="#8B8D98" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="380" y="316">Verification checks guard memory quality</text>
+    <text x="380" y="335">before reuse</text>
+  </g>
 </svg>
